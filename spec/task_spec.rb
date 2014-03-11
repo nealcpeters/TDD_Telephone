@@ -18,5 +18,10 @@ describe Task do
       expect(task.created_at).to eq true
     end
 
+    it "requires should have a method #mark_as_complete! which sets its status to complete" do
+      task.mark_as_complete
+      expect(task.status).to eq true
+    end
+
   end
 end
