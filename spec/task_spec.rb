@@ -57,8 +57,17 @@ describe Todo do
       todo.add_task(Task.new(title: "blah"))
       todo.add_task(Task.new(title: "blah"))
       todo.complete_all!
-      todo.tasks[0].status == "completed"
-      todo.tasks[1].status == "completed"
+      expect(todo.tasks[0].status == "complete").to eq true
+      expect(todo.tasks[1].status == "complete"). to eq true
+    end
+
+    it "A todo list has a method complete? which returns a boolean indicating whether or not all of its tasks have been completed" do
+      todo.add_task(Task.new(title: "blah"))
+      expect(todo.complete?).to eq false
+      todo.add_task(Task.new(title: "blah", status: "complete"))
+      expect(todo.complete?).to eq true
+
+
     end
 
   end

@@ -35,7 +35,7 @@ class Todo
   end
 
   def complete_all!
-
+    @tasks.each { |x| x.mark_as_complete! }
   end
 
 end
