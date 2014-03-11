@@ -23,9 +23,10 @@ end
 
 class Todo
   attr_reader :title
+  attr_accessor :tasks
 
   def initialize(args)
     @title = args[:title]
+    @tasks = []
   end
-
 end
