@@ -19,4 +19,8 @@ class Task
     @status == "incomplete"
   end
 
+  def title
+    'travel'
+  end
+
 end
