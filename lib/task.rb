@@ -38,4 +38,9 @@ class Todo
     @tasks.each { |x| x.mark_as_complete! }
   end
 
+  def complete?
+    @tasks.each {|task| return false unless task.status == "complete"}
+    true
+  end
+
 end
