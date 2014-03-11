@@ -15,4 +15,8 @@ class Task
     self.status = false
   end
 
+  def complete?
+    @status == "incomplete"
+  end
+
 end
