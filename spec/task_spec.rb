@@ -53,5 +53,13 @@ describe Todo do
       expect(todo.tasks.length).to eq 1
     end
 
+     it "A todo list has a method complete_all! which marks all of its tasks as complete" do
+      todo.add_task(Task.new(title: "blah"))
+      todo.add_task(Task.new(title: "blah"))
+      todo.complete_all!
+      todo.tasks[0].status == "completed"
+      todo.tasks[1].status == "completed"
+    end
+
   end
 end
