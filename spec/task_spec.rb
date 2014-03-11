@@ -19,8 +19,13 @@ describe Task do
     end
 
     it "requires should have a method #mark_as_complete! which sets its status to complete" do
-      task.mark_as_complete
+      task.mark_as_complete!
       expect(task.status).to eq true
+    end
+
+    it "should have a method #mark_as_incomplete! which sets its status to incomplete" do
+      task.mark_as_incomplete!
+      expect(task.status).to eq false
     end
 
   end

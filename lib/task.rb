@@ -7,7 +7,7 @@ class Task
     @created_at = true
   end
 
-  def mark_as_complete
+  def mark_as_complete!
     self.status = true
   end
 
