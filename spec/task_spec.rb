@@ -28,8 +28,8 @@ describe Task do
       expect(task.status).to eq false
     end
 
-    it "should have a method #{}complete? which returns a boolean indicating whether or not it has been completed" do
-      expect(task.status?).to eq false || true
+    it "should have a method #complete? which returns a boolean indicating whether or not it has been completed" do
+      expect(task.complete?).to eq false || expect(task.complete?).to eq true
     end
 
   end
