@@ -48,5 +48,10 @@ describe Todo do
       expect(todo.tasks.length).to eq 2
     end
 
+    it "Tasks can be added to the todo list using a method #add_task(task)" do
+      todo.add_task(Task.new(title: "blah"))
+      expect(todo.tasks.length).to eq 3
+    end
+
   end
 end
