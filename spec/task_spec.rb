@@ -32,10 +32,21 @@ describe Task do
       expect(task.complete?).to eq false || true
     end
 
+  end
+end
+
+describe Todo do
+  let(:todo) {Todo.new(title: "Travel List")}
+
+  context "#initialize" do
     it "a todo list should have a title" do
-      expect(task.title).to eq "travel"
+      expect(todo.title).to eq "Travel List"
+    end
+
+    it "A todo list has many tasks" do
+      todo.tasks << Task.new(title: "blah") << Task.new(title: "Place Holder")
+      expect(todo.tasks.length).to eq 2
     end
 
   end
 end
-

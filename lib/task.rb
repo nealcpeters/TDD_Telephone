@@ -19,8 +19,13 @@ class Task
     @status == "incomplete"
   end
 
-  def title
-    'travel'
+end
+
+class Todo
+  attr_reader :title
+
+  def initialize(args)
+    @title = args[:title]
   end
 
 end
