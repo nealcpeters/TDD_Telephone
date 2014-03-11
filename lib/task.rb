@@ -34,4 +34,8 @@ class Todo
     @tasks << task
   end
 
+  def complete_all!
+
+  end
+
 end
