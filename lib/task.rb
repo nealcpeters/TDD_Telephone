@@ -8,11 +8,11 @@ class Task
   end
 
   def mark_as_complete!
-    self.status = true
+    self.status = "complete"
   end
 
   def mark_as_incomplete!
-    self.status = false
+    self.status = "incomplete"
   end
 
   def complete?

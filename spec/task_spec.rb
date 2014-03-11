@@ -20,16 +20,20 @@ describe Task do
 
     it "requires should have a method #mark_as_complete! which sets its status to complete" do
       task.mark_as_complete!
-      expect(task.status).to eq true
+      expect(task.status).to eq "complete"
     end
 
     it "should have a method #mark_as_incomplete! which sets its status to incomplete" do
       task.mark_as_incomplete!
-      expect(task.status).to eq false
+      expect(task.status).to eq "incomplete"
     end
 
     it "should have a method #complete? which returns a boolean indicating whether or not it has been completed" do
       expect(task.complete?).to eq false || true
+    end
+
+    it "a todo list should have a title" do
+      expect(task.title).to eq "travel"
     end
 
   end
