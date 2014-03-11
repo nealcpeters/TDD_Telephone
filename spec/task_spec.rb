@@ -11,7 +11,7 @@ describe Task do
     end
 
     it "requires default status to be incomplete" do
-      expect { task.status }.to eq "incomplete"
+      expect(task.status).to eq "incomplete"
     end
 
   end
